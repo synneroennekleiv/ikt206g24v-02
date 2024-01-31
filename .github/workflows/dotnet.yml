@@ -22,7 +22,10 @@ jobs:
         dotnet-version: 8.0.x
     - name: Install dependencies
       run: dotnet restore
+      working-directory: ClassLibraryProjects
     - name: Build
       run: dotnet build
+      working-directory: ClassLibraryProjects
     - name: Test with the dotnet CLI
       run: dotnet test
+      working-directory: ClassLibraryProjects
